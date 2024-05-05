@@ -1,0 +1,93 @@
+.admin-dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #cacdca;
+    color:  black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar h2 {
+    margin-bottom: 10px; /* Reduced margin to bring menu items closer */
+}
+
+.menu-items {
+    padding-top: 50px;
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove margin to lift the items up */
+}
+
+.menu-items li {
+    padding: 8px 0; /* Slightly less padding for a more compact look */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.menu-items li svg {
+    margin-right: 10px;
+}
+
+.logout-section {
+    padding-top: 20px;
+    margin-top: auto; /* Ensure logout is at the bottom */
+}
+
+.logout-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.logout-button svg {
+    margin-right: 10px;
+}
+
+.main-content {
+    color: #4CAF50;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.main-content img{
+    width: 300px;
+    height: auto;
+}
+
+.main-content h1 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.collapsed {
+    width: 0;
+    overflow: hidden; /* Hide sidebar content when collapsed */
+}
+.sidebar-toggle {
+    display: none; /* Hide toggle button on larger screens */
+}
+
+@media (max-width: 768px) {
+    .sidebar-toggle {
+        display: block; /* Show toggle button on small screens */
+        position: absolute;
+        left: 0px;
+        top: 10px;
+    }
+}
